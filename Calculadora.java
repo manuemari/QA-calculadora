@@ -6,14 +6,11 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -25,12 +22,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Calculadora {
     private AndroidDriver driver;
 
-    private final String DEVICENAME = "R5CT20Q8CBV";
+    private final String DEVICENAME = "Use your device name here"; //you can check it with adb devices 
     private final String PLATFORMNAME = "Android";
-    private final String CALCULATORPACKAGE = "com.sec.android.app.popupcalculator";
-    private final String APPIUMURL = "http://192.168.1.14:4723/";
+    private final String CALCULATORPACKAGE = "com.sec.android.app.popupcalculator"; //it may change on your device.
+    private final String APPIUMURL = "url given by appium when you start it";
     private final String DRIVERNOTINICIALIZEDERROR = "El driver no está inicializado.";
 
+    //the next items may have a different name, depends of the devices you are using
     private final String CALCULATOREQUALSBUTTON = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_equal";
     private final String CALCULATORACBUTTON = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_clear";
     private final String CALCULATORPLUSBUTTON = "com.sec.android.app.popupcalculator:id/calc_keypad_btn_add";
